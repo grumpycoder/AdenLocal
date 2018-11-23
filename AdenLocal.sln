@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\ConsoleUI.csproj", "{CAC3AB1E-5AA8-4FD5-A69B-F3851B6BD7C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLibrary", "CoreLibrary\CoreLibrary.csproj", "{19DEBE88-B91D-4FED-A91C-E50D83899754}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AdenLocal", "AdenLocal\AdenLocal.sqlproj", "{3C68CC30-C780-429D-92FF-902F21A79077}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,16 @@ Global
 		{CAC3AB1E-5AA8-4FD5-A69B-F3851B6BD7C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAC3AB1E-5AA8-4FD5-A69B-F3851B6BD7C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAC3AB1E-5AA8-4FD5-A69B-F3851B6BD7C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19DEBE88-B91D-4FED-A91C-E50D83899754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19DEBE88-B91D-4FED-A91C-E50D83899754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19DEBE88-B91D-4FED-A91C-E50D83899754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19DEBE88-B91D-4FED-A91C-E50D83899754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C68CC30-C780-429D-92FF-902F21A79077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C68CC30-C780-429D-92FF-902F21A79077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C68CC30-C780-429D-92FF-902F21A79077}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3C68CC30-C780-429D-92FF-902F21A79077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C68CC30-C780-429D-92FF-902F21A79077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C68CC30-C780-429D-92FF-902F21A79077}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
