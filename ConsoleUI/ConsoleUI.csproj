@@ -33,17 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Alsde.Entity, Version=2018.4.9.25674, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Alsde.Entity.2018.4.3\lib\net451\Alsde.Entity.dll</HintPath>
-    </Reference>
-    <Reference Include="Alsde.Extensions, Version=2018.5.22.6717, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Alsde.Extensions.2018.5.22.6717\lib\net451\Alsde.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="CSharpFunctionalExtensions, Version=1.12.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CSharpFunctionalExtensions.1.12.0\lib\net461\CSharpFunctionalExtensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    <Reference Include="CSharpFunctionalExtensions, Version=1.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSharpFunctionalExtensions.1.13.0\lib\net461\CSharpFunctionalExtensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -62,6 +53,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoreLibrary\CoreLibrary.csproj">
+      <Project>{19debe88-b91d-4fed-a91c-e50d83899754}</Project>
+      <Name>CoreLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
