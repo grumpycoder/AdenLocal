@@ -1,5 +1,6 @@
 ﻿using CoreLibrary;
 using System;
+using CoreLibrary.Models;
 
 namespace ConsoleUI
 {
@@ -11,10 +12,17 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
             GlobalConfig.InitializeConnection();
-
             _dataConnection = GlobalConfig.DataConnection;
 
-            DisplaySubmissions();
+            //DisplaySubmissions();
+
+            SubmissionModel submission = new SubmissionModel("045");
+
+            Console.WriteLine(submission.CurrentState());
+
+            submission.SubmissionState.Complete();
+
+            Console.WriteLine(submission.CurrentState());
 
             Console.ReadLine();
         }
@@ -25,7 +33,7 @@ namespace ConsoleUI
 
             foreach (var model in submissions)
             {
-                Console.WriteLine($"{model.FileSpecification} : {model.DueDate}");
+                Console.WriteLine($"{model.FileSpecification} : {model.DueDate} : {model.AssignedUser} : {model.SubmissionState}");
             }
         }
     }

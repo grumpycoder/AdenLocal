@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CoreLibrary.Models;
+using System.Collections.Generic;
 
 namespace CoreLibrary
 {
