@@ -1,6 +1,6 @@
 ﻿namespace CoreLibrary.Models
 {
-    public abstract class SubmissionState
+    public abstract class State
     {
 
         protected SubmissionModel submission;

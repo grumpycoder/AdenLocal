@@ -1,6 +1,6 @@
 ﻿namespace CoreLibrary.Models
 {
-    public class NotStartedState : SubmissionState
+    public class NotStartedState : State
     {
         public NotStartedState(SubmissionModel submission)
         {
@@ -9,7 +9,7 @@
 
         public override void Complete()
         {
-            submission.SubmissionState = new PendingState();
+            submission.State = new PendingState(submission);
         }
 
     }

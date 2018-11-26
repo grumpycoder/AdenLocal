@@ -6,19 +6,25 @@ namespace CoreLibrary.Models
     {
         public int Id { get; set; }
         public DateTime DueDate { get; set; }
-        public string FileSpecification { get; private set; }
+        public string FileSpecification { get; set; }
         public string AssignedUser { get; set; }
-        public SubmissionState SubmissionState { get; set; }
+
+        public State State { get; set; }
+
+        public SubmissionModel()
+        {
+            State = new NotStartedState(this);
+        }
 
         public SubmissionModel(string specification)
         {
             FileSpecification = specification;
-            SubmissionState = new NotStartedState(this);
+            State = new NotStartedState(this);
         }
 
         public string CurrentState()
         {
-            return SubmissionState.GetType().Name;
+            return State.GetType().Name;
         }
     }
 

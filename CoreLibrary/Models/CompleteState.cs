@@ -1,9 +1,8 @@
 ﻿namespace CoreLibrary.Models
 {
-    public class PendingState : State
+    public class CompleteState : State
     {
-
-        public PendingState(SubmissionModel submission)
+        public CompleteState(SubmissionModel submission)
         {
             this.submission = submission;
         }

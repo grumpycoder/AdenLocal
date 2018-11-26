@@ -1,5 +1,6 @@
 ﻿using CoreLibrary;
 using System;
+using System.Collections.Generic;
 using CoreLibrary.Models;
 
 namespace ConsoleUI
@@ -7,33 +8,47 @@ namespace ConsoleUI
     class Program
     {
         private static IDataConnection _dataConnection;
-
+        private static List<SubmissionModel> submissions; 
 
         static void Main(string[] args)
         {
             GlobalConfig.InitializeConnection();
             _dataConnection = GlobalConfig.DataConnection;
 
-            //DisplaySubmissions();
+            LoadSubmissions();
+            DisplaySubmissions(submissions);
 
-            SubmissionModel submission = new SubmissionModel("045");
 
-            Console.WriteLine(submission.CurrentState());
 
-            submission.SubmissionState.Complete();
+            //SubmissionModel submission = new SubmissionModel("045");
 
-            Console.WriteLine(submission.CurrentState());
+            //Console.WriteLine($"Current State: {submission.CurrentState()}");
 
+            //submission.State.Complete();
+
+            //Console.WriteLine($"Current State: {submission.CurrentState()}");
+
+            //submission.State.Complete();
+
+            //Console.WriteLine($"Current State: {submission.CurrentState()}");
+
+
+            Console.WriteLine("Finished ");
             Console.ReadLine();
         }
 
-        private static void DisplaySubmissions()
+        private static void LoadSubmissions()
         {
-            var submissions = _dataConnection.GetSubmissions();
+            submissions = _dataConnection.GetSubmissions();
+            
+        }
 
+        private static void DisplaySubmissions(List<SubmissionModel> submissions)
+        {
+           
             foreach (var model in submissions)
             {
-                Console.WriteLine($"{model.FileSpecification} : {model.DueDate} : {model.AssignedUser} : {model.SubmissionState}");
+                Console.WriteLine($"{model.FileSpecification} : {model.DueDate} : {model.AssignedUser} : {model.CurrentState()}");
             }
         }
     }
